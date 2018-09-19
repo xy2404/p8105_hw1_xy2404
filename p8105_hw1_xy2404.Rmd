@@ -50,3 +50,19 @@ as.numeric(as.character(Homework1_df$vec_factor))
 ```
 After converting character variables into factor variable, it is able to be converted into numeric variables subsequently.
 However, a factor variable, (which can be converted into numeric variables), can no longer be converted in to numeric after convert into character variable, instead NAs introduced by coercion. 
+
+## Problem 2
+
+Create a data frame comprised of x and y
+
+```{r df_create}
+set.seed(1000)
+
+Homework1_Q2_df = tibble(
+  x = rnorm(1000),
+  y = rnorm(1000),
+  logic = x+y>0,
+  as_numeric = as.numeric(logic),
+  as_factor = as.factor(logic)
+)
+```
