@@ -71,3 +71,14 @@ Homework1_Q2_df = tibble(
 
 The vector is consist of `r ncol(Homework1_Q2_df)` variables, each with `r nrow(Homework1_Q2_df)` observations. The mean of x is `r mean(Homework1_Q2_df$x)` and the median of x is `r median(Homework1_Q2_df$x)`, the proportion of cases for which the logical vector is TRUE is `r sum(Homework1_Q2_df$logic)/nrow(Homework1_Q2_df[3])`.
 
+##### Make three scatterplots of y vs x ( logic, numeric and factor variables)
+
+```{r}
+logic_plot <- ggplot(Homework1_Q2_df, aes(x = x, y = y,  color=logic)) + geom_point() + ggtitle('The graph of logic')
+logic_plot
+ggplot(Homework1_Q2_df, aes(x = x, y = y, color=as_numeric)) + geom_point() + ggtitle('The graph of as_numeric')
+ggplot(Homework1_Q2_df, aes(x = x, y = y, color=as_factor)) + geom_point() + ggtitle('The graph of as_factor')
+
+ggsave(logic_plot, file='The graph of logic.jpg')
+```
+
