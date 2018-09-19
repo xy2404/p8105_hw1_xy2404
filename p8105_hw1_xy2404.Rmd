@@ -31,3 +31,22 @@ mean(Homework1_df$vec_char)
 mean(Homework1_df$vec_factor)
 ```
 It can be observed that the mean of numeric and logic variable can be derived, while that of character and factor variable failed. It is obvious that numeric vector have mean. The reason that logic variable have mean is that the value was stored as 0 (FALSE) and 1 (TRUE). However, as the character and factor variable are consist of strings, R can not convert them into string, hence NA was then returned.
+
+##### In some cases, you can explicitly convert variables from one type to another. Write a code chunk that applies the as.numeric function to the logical, character, and factor variables (please show this chunk but not the output). What happens? In a second code chunk, convert your character variable from character to factor to numeric; similarly, convert your factor variable from factor to character to numeric. What happens?
+
+```{r eval=FALSE}
+as.numeric(Homework1_df$vec_logic)
+as.numeric(Homework1_df$vec_char)
+as.numeric(Homework1_df$vec_factor)
+```
+By converting logical, character, and factor variables into numeric variables. It can be observed that:
+1. For the logic variable, True becomes 1 and False becomes 0. 
+2. For the factor variable, two different elements are randomly assigned to 1 and further integers.
+3. For the character variable, NAs are introduced by coercion.
+
+```{r}
+as.numeric(as.factor(Homework1_df$vec_char))
+as.numeric(as.character(Homework1_df$vec_factor))
+```
+After converting character variables into factor variable, it is able to be converted into numeric variables subsequently.
+However, a factor variable, (which can be converted into numeric variables), can no longer be converted in to numeric after convert into character variable, instead NAs introduced by coercion. 
