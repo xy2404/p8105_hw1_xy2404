@@ -1,0 +1,23 @@
+---
+title: "p8105_hw1_xy2404.Rmd"
+author: "Annie Yu"
+date: "9/20/2018"
+output: pdf_document
+---
+
+```{r setup, include = FALSE}
+library(tidyverse)
+```
+
+## Problem 1
+
+Create data frame with 1.numeric 2. logic 3. character and 4. factor vectors
+
+```{r Homework_1_problem_1}
+Homework1_df = tibble(
+  vec_numeric = runif(10, min =, max =5),
+  vec_logic = (vec_numeric>2),
+  vec_char = c("This", "is", "the", "first", "homework", "for", "the", "data", "Science", "class"), 
+  vec_factor = factor(c("T", "F", "T", "T", "T", "F", "T", "T", "T", "T"))
+)
+```
