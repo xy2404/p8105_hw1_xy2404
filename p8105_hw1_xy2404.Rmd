@@ -66,3 +66,8 @@ Homework1_Q2_df = tibble(
   as_factor = as.factor(logic)
 )
 ```
+
+##### Write a short description of your vector using inline R code, including: * the size of the dataset * the mean and median of x * the proportion of cases for which the logical vector is TRUE
+
+The vector is consist of `r ncol(Homework1_Q2_df)` variables, each with `r nrow(Homework1_Q2_df)` observations. The mean of x is `r mean(Homework1_Q2_df$x)` and the median of x is `r median(Homework1_Q2_df$x)`, the proportion of cases for which the logical vector is TRUE is `r sum(Homework1_Q2_df$logic)/nrow(Homework1_Q2_df[3])`.
+
