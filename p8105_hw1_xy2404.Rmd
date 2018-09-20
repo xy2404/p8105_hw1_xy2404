@@ -79,6 +79,11 @@ logic_plot
 ggplot(Homework1_Q2_df, aes(x = x, y = y, color=as_numeric)) + geom_point() + ggtitle('The graph of as_numeric')
 ggplot(Homework1_Q2_df, aes(x = x, y = y, color=as_factor)) + geom_point() + ggtitle('The graph of as_factor')
 
+
 ggsave(logic_plot, file='The graph of logic.jpg')
 ```
 
+### The color of ggplot
+For the color of ggplot "the graph of logic": the False is red and the True is blue.
+For the color of ggplot "The graph of as_numeric": the left side is black and the right side is blue.
+For the color of ggplot "The graph of as_factor": the False is red and the True is blue
